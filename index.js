@@ -1,3 +1,10 @@
+import cors from "cors";
+
+// Allow frontend access from anywhere (or specify your Bolt domain)
+app.use(cors({
+  origin: "*", // or "https://bolt.new" if you want to restrict
+  methods: ["POST"],
+}));
 import express from "express";
 import cors from "cors";
 import multer from "multer";
